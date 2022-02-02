@@ -20,7 +20,7 @@ meal(fish,M,white) >> meal(fish,M,_) :- true.
 +!go_order(L,_) >> +!go_order(_,_) :- at(L).
 +!go_order(italian, meal(S,meat,W)) >> +!go_order(L,meal(S,_,W)) :- not at(L).
 
-
+@preferences
 +!go_order(Loc,Meal) :
     restaurant(Loc) && not at(Loc) =>
         #println("moving to: " + Loc);
@@ -28,11 +28,13 @@ meal(fish,M,white) >> meal(fish,M,_) :- true.
         +at(Loc);
         !order(Meal).
 
+@preferences
 +!go_order(Loc,Meal) :
     restaurant(Loc) && at(Loc) =>
         #println("already at: " + Loc);
         !order(Meal).
 
+@preferences
 +!order(meal(S,M,W)) :
     meal(S,M,W) && at(Loc) =>
         #println("ordering: " + meal(S,M,W));

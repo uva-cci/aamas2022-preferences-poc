@@ -1,6 +1,6 @@
 resolvers += ("agent-script" at "http://145.100.135.102:8081/repository/agent-script/").withAllowInsecureProtocol(true)
 
-addSbtPlugin("nl.uva.sne.cci" % "sbt-scriptcc" % "4.31")
+addSbtPlugin("nl.uva.sne.cci" % "sbt-scriptcc" % "4.32")
 
 
 

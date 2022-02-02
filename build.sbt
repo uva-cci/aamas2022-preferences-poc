@@ -13,8 +13,8 @@ organization := "nl.uva.sne.cci"
 testOptions in Test += Tests.Argument("-oD")
 resolvers += ("agent-script" at "http://145.100.135.102:8081/repository/agent-script/").withAllowInsecureProtocol(true)
 
-libraryDependencies += "nl.uva.sne.cci" % "agentscript-grounds_2.13" % "0.31"
-libraryDependencies += "nl.uva.sne.cci" % "agentscript-commons_2.13" % "0.31"
+libraryDependencies += "nl.uva.sne.cci" % "agentscript-grounds_2.13" % "0.32"
+libraryDependencies += "nl.uva.sne.cci" % "agentscript-commons_2.13" % "0.32"
 
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.9" % Test
 libraryDependencies += "com.typesafe.akka" %% "akka-actor-testkit-typed" % AkkaVersion % Test
